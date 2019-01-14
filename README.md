@@ -1,10 +1,12 @@
 # Harper: Lesson Discovery and Aggregation
 
--   [Proposal](#s:proposal)
--   [Community](#s:community)
--   [Usage](#s:usage)
--   [Forces](#s:forces)
--   [Questions](#s:questions)
+<ul>
+  <li><a href="#s:proposal">Proposal</a></li>
+  <li><a href="#s:community">Community</a></li>
+  <li><a href="#s:usage">Usage</a></li>
+  <li><a href="#s:forces">Forces</a></li>
+  <li><a href="#s:questions">Questions</a></li>
+</ul>
 
 Harper's goal is better learning outcomes with less effort.
 Its design principles are:
@@ -35,7 +37,7 @@ first president of the University of Chicago,
 who encouraged universities to offer distance education courses in the 1890s.
 "Harper" also happens to be the name of my youngest niece.
 
-### Acknowledgments {#s:acknowledgments}
+<h2 id="s:acknowledgments">Acknowledgments</h2>
 
 I'm grateful to
 Mike Caulfield,
@@ -57,7 +59,7 @@ Everything that's still naive, confused, or just plain wrong is my responsibilit
 I'd be very grateful for feedback [by email][mailto]
 or as comments on this page.
 
-## Proposal {#s:proposal}
+<h2 id="s:proposal">Proposal</h2>
 
 *We have moved the proposal itself to the top of this file
 because we <strike>believe</strike> hope that's what people will be most interested in.
@@ -198,7 +200,7 @@ needs more attention.
 -   [Properties of the normal distribution](http://harper.org/r/stats-normal-172ztq/)
 ```
 
-## Community {#s:community}
+<h2 id="s:community">Community</h2>
 
 We support collaboration with a voting mechanism like [Stack Overflow][stack]'s,
 but with subject headings drawn from lessons:
@@ -239,7 +241,7 @@ but with subject headings drawn from lessons:
         and clicks "OK".
     3.  That excerpt is then displayed on our site under their lesson's heading for that objective.
 
-## Usage {#s:usage}
+<h2 id="s:usage">Usage</h2>
 
 ### How does an instructor find a lesson?
 
@@ -315,7 +317,7 @@ Note that we archive past `harper.md` files, but not the actual lesson content.
     could unpack the zip file in a cloud instance
     and send instructions to learners telling them how to get their own copy of that project to run.
 
-## Forces {#s:forces}
+<h2 id="s:forces">Forces</h2>
 
 ### Roles
 
@@ -471,7 +473,7 @@ Our delivery mechanisms for getting lessons to learners are:
     but assumes that learners will then interact with those materials through the LMS
     rather than (for example) using an IDE on their desktop.
 
-## Questions and Comments {#s:questions}
+<h2 id="s:questions">Questions and Comments</h2>
 
 1.  There is nothing in the `harper.md` file that describes the intended audience for the lesson
     (e.g., how sophisticated they are).
