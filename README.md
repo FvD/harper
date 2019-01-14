@@ -1,13 +1,5 @@
 # Harper: Lesson Discovery and Aggregation
 
-<ul>
-  <li><a href="#s:proposal">Proposal</a></li>
-  <li><a href="#s:community">Community</a></li>
-  <li><a href="#s:usage">Usage</a></li>
-  <li><a href="#s:forces">Forces</a></li>
-  <li><a href="#s:questions">Questions</a></li>
-</ul>
-
 Harper's goal is better learning outcomes with less effort.
 Its design principles are:
 
@@ -37,7 +29,17 @@ first president of the University of Chicago,
 who encouraged universities to offer distance education courses in the 1890s.
 "Harper" also happens to be the name of my youngest niece.
 
-<h2 id="s:acknowledgments">Acknowledgments</h2>
+**Contents**
+
+<ul>
+  <li><a href="#s:proposal">Proposal</a></li>
+  <li><a href="#s:community">Community</a></li>
+  <li><a href="#s:usage">Usage</a></li>
+  <li><a href="#s:forces">Forces</a></li>
+  <li><a href="#s:questions">Questions</a></li>
+</ul>
+
+**Acknowledgments**
 
 I'm grateful to
 Mike Caulfield,
