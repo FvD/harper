@@ -1,5 +1,7 @@
 # Harper: Lesson Discovery and Aggregation
 
+> Please see the description of [Harper-Lite](./harper-lite.md) for a first step.
+
 Harper's goal is better learning outcomes with less effort.
 Its design principles are:
 
