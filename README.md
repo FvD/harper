@@ -1,4 +1,4 @@
-# Harper-Lite: Much Simpler Lesson Discovery and Aggregation
+# Harper-Lite: Simple Lesson Discovery and Aggregation
 
 Harper's goal is better learning outcomes with less effort;
 Harper-Lite's is to get the ball rolling with as little effort as possible.
