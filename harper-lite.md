@@ -26,12 +26,12 @@ requirements:
 objectives:
   - "Some learning objective."
   - "Some other learning objective."
-prerequisites:
-  - "some glossary term"
-  - "some other glossary term"
-definitions:
+requires:
+  - "a glossary term"
+  - "a skill"
+teaches:
   - "a term defined in this lesson"
-  - "some other term defined in this lesson"
+  - "a skill taught in this lesson"
 notes: >
   One or more sentences describing things instructors ought to know, formatted with Markdown.
   For example, the notes could explain how long the lesson usually takes to do.
@@ -50,9 +50,11 @@ Notes:
     using the syntax preferred by that language's default package manager.
 -   Learning objectives should be single sentences, each with an active verb,
     describing something observable.
--   `prerequisites` and `definitions` list glossary terms but do *not* provide definitions of those terms.
-    `prerequisites` helps people figure out what knowledge they need to have to start the lesson;
-    together, these fields make lessons more discoverable.
+-   The items under `requires` and `teaches` are meant to be keywords, not full explanations.
+    These will be used to optimize search and to help people stitch lessons together
+    (e.g., "The lesson I want requires X---where can I learn about it?").
+    After discussion, we've grouped terms and skills together to keep the YAML simple;
+    entries may use Markdown formatting (e.g., to show `function_names`).
 -   `notes is for anything else that might be helpful.
 
 An example of a `harper.md` file is shown below;
@@ -75,12 +77,15 @@ objectives:
   - "Describe the 68-95-99.7 rule and explain why it works and when it fails."
   - "Describe and apply the Shapiro-Wilk test for normality of univariate data."
   - "Describe and apply the ECF test for normality of multivariate data."
-prerequisites:
+requires:
   - "Normal distribution"
+  - "Quantiles"
   - "Statistical power"
   - "Covariance matrix"
   - "Empirical characteristic function"
-definitions:
+  - "Install R package"
+teaches:
+  - "`quantile`"
   - "Kurtosis risk"
   - "68/95/99.7 Rule"
   - "Shapiro-Wilk test"
