@@ -75,10 +75,10 @@ requirements:
   R:
   - "package_1"
   - "package_2>=1.2.3.4"
-objectives:
+prereq:
   - "Some learning objective."
   - "Some other learning objective."
-requires:
+postreq:
   - "a glossary term"
   - "a skill"
 teaches:
@@ -103,14 +103,18 @@ notes: >
     using the syntax preferred by that language's default package manager.
 -   Learning objectives should be single sentences, each with an active verb,
     describing something observable.
--   The items under `requires` and `teaches` are meant to be keywords, not full explanations.
-    These will be used to optimize search and to help people stitch lessons together
-    (e.g., "The lesson I want requires X---where can I learn about it?").
-    After discussion, we've grouped terms and skills together to keep the YAML simple;
-    entries may use Markdown formatting (e.g., to show `function_names`).
+-   The `prereq` and `postreq` fields are discussed below.
 -   `notes is for anything else that might be helpful.
 
-An example of a `harper.md` file is shown below;
+The `prereq` field is a list of terms or skills the lesson requires learners to have;
+the `postreq` field is a list of terms or skills the lesson teaches.
+We have used these rather clumsy names to avoid collision with `requirements`
+(which here means "software requirements").
+The items under `prereq` and `postreq` are meant to be keywords, not full explanations.
+These will be used to optimize search and to help people stitch lessons together
+(e.g., "The lesson I want requires X---where can I learn about it?").
+
+An example of a Harper file is shown below;
 
 ```
 schema: "harper-lite 0.1"
@@ -130,14 +134,14 @@ objectives:
   - "Describe the 68-95-99.7 rule and explain why it works and when it fails."
   - "Describe and apply the Shapiro-Wilk test for normality of univariate data."
   - "Describe and apply the ECF test for normality of multivariate data."
-requires:
+prereq:
   - "Normal distribution"
   - "Quantiles"
   - "Statistical power"
   - "Covariance matrix"
   - "Empirical characteristic function"
   - "Install R package"
-teaches:
+postreq:
   - "`quantile`"
   - "Kurtosis risk"
   - "68/95/99.7 Rule"
@@ -155,7 +159,7 @@ notes: >
 We support collaboration with a voting mechanism like [Stack Overflow][stack]'s,
 but with subject headings drawn from lessons:
 
-1.  An author registers a lesson by providing the URL to its `harper.md` file,
+1.  An author registers a lesson by providing the URL to its Harper file,
     just as someone can register a blog by providing a URL to an aggregator.
 
 2.  The site extracts data from the file and displays the lesson under each of `teaches` headings
@@ -167,9 +171,9 @@ but with subject headings drawn from lessons:
 
 4.  We will provide an interactive upload mode:
     after providing a URL for a lesson,
-    the author is walked through a very simple online form that asks for the information that goes in the lesson's `harper.md` file.
+    the author is walked through a very simple online form that asks for the information that goes in the lesson's Harper file.
     We save that information and give it back to them to download and add to the lesson.
-    We still require that the `harper.md` file be in the lesson's root directory as a check on authenticity:
+    We still require that the Harper file be in the lesson's root directory as a check on authenticity:
     allowing person X to describe a lesson created by person Y opens up too many opportunities for abuse.
 
 ## Scenarios
@@ -184,10 +188,10 @@ but with subject headings drawn from lessons:
 
 ### How does an author register a lesson?
 
-1. They create a directory on their website with a meaningful name that includes a `harper.md` file
+1. They create a directory on their website with a meaningful name that includes a Harper file
    and possibly a zip file containing starter materials (if the lesson's exercises need any).
 2. They sign into their account on our site and register the URL of the lesson directory.
-3. Our site validates their `harper.md` file.
+3. Our site validates their Harper file.
 
 As noted above,
 we don't allow people to register lessons that they don't control,
@@ -232,8 +236,8 @@ we provide a "please register this" workflow:
     go to "My Lessons",
     and push the "update" button next to the lesson in question.
 
-Note that we archive past `harper.md` files, but not the actual lesson content.
-(We are not a repository, we're an index.)
+Note that we archive past Harper files but not the actual lesson content.
+(We're an index not a repository.)
 
 [choral-explanations]: https://hapgood.us/2016/05/13/choral-explanations/
 [folksonomy]: https://en.wikipedia.org/wiki/Folksonomy
