@@ -1,10 +1,10 @@
 -- Example Harper-Lite database for explanatory and testing purposes.
 -- Use `schema.sql` to create tables first.
 
-insert into lesson_anchor values (1, "2019-01-01 09:00:00");
+insert into lesson_anchor values (NULL, "2019-01-01 09:00:00");
 
 insert into lesson_version values (
-	1,
+	NULL,
         1,
         "2019-01-01 09:00:01",
         "Tests of Univariate Normality",
@@ -16,11 +16,11 @@ insert into lesson_version values (
 );
 
 insert into person_anchor values
-	(1, "2019-01-01 09:00:01")
+	(NULL, "2019-01-01 09:00:01")
 ;
 
 insert into person_version values (
-	1,
+	NULL,
         1,
         "2019-01-01 09:00:02",
         "Walter Bishop",
@@ -29,46 +29,46 @@ insert into person_version values (
 );
 
 insert into contributor values
-	(1, 1, 1)
+	(NULL, 1, 1)
 ;
 
 insert into objective values
-	(1, 1, "Describe the 68-95-99.7 rule and explain why it works and when it fails."),
-	(2, 1, "Describe and apply the Shapiro-Wilk test for normality of univariate data."),
-	(3, 1, "Describe and apply the ECF test for normality of multivariate data.")
+	(NULL, 1, "Describe the 68-95-99.7 rule and explain why it works and when it fails."),
+	(NULL, 1, "Describe and apply the Shapiro-Wilk test for normality of univariate data."),
+	(NULL, 1, "Describe and apply the ECF test for normality of multivariate data.")
 ;
 
 insert into keyword values
-	(1, "2019-01-01 09:00:03", "Normal distribution"),
-	(2, "2019-01-01 09:00:03", "Quantiles"),
-	(3, "2019-01-01 09:00:03", "Statistical power"),
-	(4, "2019-01-01 09:00:03", "Covariance matrix"),
-	(5, "2019-01-01 09:00:03", "Empirical characteristic function"),
-	(6, "2019-01-01 09:00:03", "Install R package"),
-	(7, "2019-01-01 09:00:03", "`quantile`"),
-	(8, "2019-01-01 09:00:03", "Kurtosis risk"),
-	(9, "2019-01-01 09:00:03", "68/95/99.7 Rule"),
-	(10, "2019-01-01 09:00:03", "Shapiro-Wilk test"),
-	(11, "2019-01-01 09:00:03", "ECF test")
+	(NULL, "2019-01-01 09:00:03", "Normal distribution"),
+	(NULL, "2019-01-01 09:00:03", "Quantiles"),
+	(NULL, "2019-01-01 09:00:03", "Statistical power"),
+	(NULL, "2019-01-01 09:00:03", "Covariance matrix"),
+	(NULL, "2019-01-01 09:00:03", "Empirical characteristic function"),
+	(NULL, "2019-01-01 09:00:03", "Install R package"),
+	(NULL, "2019-01-01 09:00:03", "`quantile`"),
+	(NULL, "2019-01-01 09:00:03", "Kurtosis risk"),
+	(NULL, "2019-01-01 09:00:03", "68/95/99.7 Rule"),
+	(NULL, "2019-01-01 09:00:03", "Shapiro-Wilk test"),
+	(NULL, "2019-01-01 09:00:03", "ECF test")
 ;
 
 insert into pre_req values
-	(1, 1, 1),
-        (2, 1, 2),
-        (3, 1, 3),
-        (4, 1, 4),
-        (5, 1, 5),
-        (6, 1, 6)
+	(NULL, 1, 1),
+        (NULL, 1, 2),
+        (NULL, 1, 3),
+        (NULL, 1, 4),
+        (NULL, 1, 5),
+        (NULL, 1, 6)
 ;
 
 insert into post_req values
-	(1, 1, 7),
-        (2, 1, 8),
-        (3, 1, 9),
-        (4, 1, 10),
-        (5, 1, 11)
+	(NULL, 1, 7),
+        (NULL, 1, 8),
+        (NULL, 1, 9),
+        (NULL, 1, 10),
+        (NULL, 1, 11)
 ;
 
 insert into requirement values
-	(1, 1, "R", "nickr", ">=1.2.3.4")
+	(NULL, 1, "R", "nickr", ">=1.2.3.4")
 ;

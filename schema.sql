@@ -1,6 +1,6 @@
 -- Harper-Lite Database Schema
 --
--- * Every record has a unique `id` serial number within its table.
+-- * Every record has a unique auto-incremented `id` serial number column.
 --
 -- * All foreign keys are named `TABLE_id` where `TABLE` is the name of the
 --   table they reference.
@@ -24,13 +24,13 @@
 
 -- Unique identifier for a lesson.
 create table lesson_anchor (
-	id			integer	not null primary key,
+	id			integer	not null primary key autoincrement,
 	created			text	not null
 );
 
 -- Details of a specific version of a lesson.
 create table lesson_version (
-	id			integer	not null primary key,
+	id			integer	not null primary key autoincrement,
 	lesson_anchor_id	integer	not null,
 	last_updated		integer	not null,
 	title			text	not null,
@@ -44,13 +44,13 @@ create table lesson_version (
 
 -- Unique identifier for a person.
 create table person_anchor (
-	id			integer	not null primary key,
+	id			integer	not null primary key autoincrement,
 	created			text	not null
 );
 
 -- Details of a specific version of a person.
 create table person_version (
-	id			integer	not null primary key,
+	id			integer	not null primary key autoincrement,
 	person_anchor_id	integer	not null,
 	last_updated		integer	not null,
 	name			text	not null,
@@ -61,7 +61,7 @@ create table person_version (
 
 -- Join table connecting people to lessons.
 create table contributor (
-	id			integer	not null primary key,
+	id			integer	not null primary key autoincrement,
 	lesson_version_id	integer	not null,
 	person_version_id	integer	not null,
 	foreign key(lesson_version_id)	references lesson_version(id),
@@ -70,7 +70,7 @@ create table contributor (
 
 -- Learning objectives for each version of a lesson.
 create table objective (
-	id			integer	not null primary key,
+	id			integer	not null primary key autoincrement,
 	lesson_version_id	integer	not null,
 	objective		text	not null,
 	foreign key(lesson_version_id)	references lesson_version(id)
@@ -78,14 +78,14 @@ create table objective (
 
 -- Keywords (actually phrases) used for prereqs and postreqs.
 create table keyword (
-	id			integer	not null primary key,
+	id			integer	not null primary key autoincrement,
 	created			text	not null,
 	keyword			text	not null
 );
 
 -- Join table connecting keywords as prerequisites of a lesson version.
 create table pre_req (
-	id			integer	not null primary key,
+	id			integer	not null primary key autoincrement,
 	lesson_version_id	integer	not null,
 	keyword_id		integer	not null,
 	foreign key(keyword_id)		references keywords(id)
@@ -94,7 +94,7 @@ create table pre_req (
 
 -- Join table connecting keywords as postrequisites of a lesson version.
 create table post_req (
-	id			integer	not null primary key,
+	id			integer	not null primary key autoincrement,
 	lesson_version_id	integer	not null,
 	keyword_id		integer	not null,
 	foreign key(keyword_id)		references keywords(id)
@@ -106,7 +106,7 @@ create table post_req (
 -- `minor` is the minor requirement (e.g., the package name).
 -- `details` is optional extra information (e.g., a version specification).
 create table requirement (
-	id			integer	not null primary key,
+	id			integer	not null primary key autoincrement,
         lesson_version_id	integer	not null,
 	major			text	not null,
 	minor			text	not null,
