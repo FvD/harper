@@ -245,5 +245,3 @@ Note that we archive past Harper files but not the actual lesson content.
 [harper-william]: https://en.wikipedia.org/wiki/William_Rainey_Harper
 [oer-landmines]: http://third-bit.com/2018/12/02/oer-landmines.html
 [stack]: http://stackoverflow.com
-
-
