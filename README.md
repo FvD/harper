@@ -104,7 +104,7 @@ notes: >
 -   Learning objectives should be single sentences, each with an active verb,
     describing something observable.
 -   The `prereq` and `postreq` fields are discussed below.
--   `notes is for anything else that might be helpful.
+-   `notes` is for anything else that might be helpful.
 
 The `prereq` field is a list of terms or skills the lesson requires learners to have;
 the `postreq` field is a list of terms or skills the lesson teaches.
